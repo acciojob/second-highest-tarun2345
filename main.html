@@ -9,14 +9,13 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			if(arr.length==1)
-			{
-				return -infinity;			
-			}
 			arr.sort();
-			return arr[arr.length(
-				-2
-			)]
+let max = arr[arr.length-1];
+ for(let i=arr.length-1;i>=0;i--){
+    if(arr[i] !== max){
+        return arr[i];
+    }
+}
 			
 		}
 
@@ -26,7 +25,7 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			//alert(secondHighest(arr));
 		}
 		Main();
 	</script>
